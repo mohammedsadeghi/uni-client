@@ -1,0 +1,29 @@
+/* classes that might be used over and over again will be defined here */
+@font-face {
+  font-family: "PinyonScript";
+  src: url("./../fonts/PinyonScript-Regular.ttf");
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.padding-small {
+  padding: 0.5rem;
+}
+
+.font-family__PinyonScript {
+  font-family: "PinyonScript";
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,10 @@
+.box-container {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  flex-wrap: wrap;
+}
+
+.box-container :nth-child(2n-1) {
+  margin-right: auto;
+}

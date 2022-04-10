@@ -8,21 +8,23 @@
   flex-basis: 45%;
 }
 .box__content__icon__img {
-  width: 1.5rem;
+  width: 1.25rem;
   height: 1.5rem;
 }
 
 .box__content {
   justify-content: space-between;
-  height: 5vh;
+  align-items: center;
+  height: 100%;
 }
 
 .box__content__icon__button {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
   background-color: #9aa5c3;
   border: none;
+  padding: 0.5rem;
 }
 
 .box__content__icon__button:hover {
@@ -32,4 +34,9 @@
 
 .box__content__icon__button:active {
   background-color: #babbbe;
+}
+
+.box__content__box-id {
+  font-size: 1.5rem;
+  font-weight: bold;
 }

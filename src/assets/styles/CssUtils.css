@@ -27,3 +27,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.warning {
+  color: #ff0000;
+  font-size: 6rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+.warning :hover {
+  color: #520000;
+}

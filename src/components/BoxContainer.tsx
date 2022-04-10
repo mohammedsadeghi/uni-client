@@ -4,10 +4,32 @@ import "./../assets/styles/BoxContainer.css";
 import { connect } from "react-redux";
 
 type BoxContainerProps = {
-  boxCount?: number[];
+  boxCount: number[];
 };
 const BoxContainer: React.FC<BoxContainerProps> = ({ boxCount }) => {
-  const [dragId, setDragId] = React.useState<string>();
+  const [dragId, setDragId] = React.useState<string>("");
+
+  const handleDrop = (ev: any) => {
+    const dragBox = boxCount.find((box) => box === parseInt(dragId));
+    const dropBox = boxCount.find(
+      (box) => box === parseInt(ev.currentTarget.id)
+    );
+
+    const dragBoxOrder = dragBox.order;
+    const dropBoxOrder = dropBox.order;
+
+    const newBoxState = boxes.map((box) => {
+      if (box.id === dragId) {
+        box.order = dropBoxOrder;
+      }
+      if (box.id === ev.currentTarget.id) {
+        box.order = dragBoxOrder;
+      }
+      return box;
+    });
+
+    setBoxes(newBoxState);
+  };
 
   const handleDrag = (ev: any) => {
     setDragId(ev.currentTarget.id);
@@ -29,7 +51,13 @@ const BoxContainer: React.FC<BoxContainerProps> = ({ boxCount }) => {
       <div className="box-container">
         {boxCount &&
           boxCount?.map((box, index) => (
-            <Box key={index} boxNumber={box} boxHeight={boxHeight} />
+            <Box
+              key={index}
+              boxNumber={box}
+              boxHeight={boxHeight}
+              handleDrop={handleDrop}
+              handleDrag={handleDrag}
+            />
           ))}
         {boxCount && boxCount.length === 0 && (
           <p className="warning font-family__PinyonScript">No boxes yet!</p>

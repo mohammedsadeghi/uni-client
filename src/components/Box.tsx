@@ -8,8 +8,16 @@ type BoxProps = {
   boxNumber: number;
   boxHeight?: number;
   deleteBox: (boxId: number) => void;
+  handleDrag: (ev: any) => void;
+  handleDrop: (ev: any) => void;
 };
-const Box: React.FC<BoxProps> = ({ boxNumber, boxHeight, deleteBox }) => {
+const Box: React.FC<BoxProps> = ({
+  boxNumber,
+  boxHeight,
+  deleteBox,
+  handleDrag,
+  handleDrop,
+}) => {
   const handleDeleteBox = (boxId: number) => {
     deleteBox(boxId);
   };

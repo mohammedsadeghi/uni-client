@@ -1,0 +1,42 @@
+.box {
+  background-color: #667292;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #fff;
+  display: flex;
+  flex-basis: 45%;
+}
+.box__content__icon__img {
+  width: 1.25rem;
+  height: 1.5rem;
+}
+
+.box__content {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.box__content__icon__button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: #9aa5c3;
+  border: none;
+  padding: 0.5rem;
+}
+
+.box__content__icon__button:hover {
+  background-color: #9196a1;
+  cursor: pointer;
+}
+
+.box__content__icon__button:active {
+  background-color: #babbbe;
+}
+
+.box__content__box-id {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

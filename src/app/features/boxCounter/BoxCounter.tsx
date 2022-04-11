@@ -26,9 +26,12 @@ export const boxCounterSlice = createSlice({
       ];
       //the selected box will be eliminated from the array
     },
+    setBoxOrder: (state, action: PayloadAction<number[]>) => {
+      state.boxCount = action.payload;
+    },
   },
 });
 
-export const { increment, decrement } = boxCounterSlice.actions;
+export const { increment, decrement, setBoxOrder } = boxCounterSlice.actions;
 
 export default boxCounterSlice.reducer;
